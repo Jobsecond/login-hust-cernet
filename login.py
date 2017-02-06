@@ -17,12 +17,14 @@ def login():
         'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
         'Accept-Encoding': 'gzip, deflate',
         'Referer': 'http://wuhan.pbb.edu.cn/portal.php',
+        # For security purposes, some fields (those with braces) are hidden. You can get them by yourself.
         'Cookie': 'PHPSESSID={phpsessid}; cernet_user_name={username}; cernet_password={password_encoded}',
         'Connection': 'keep-alive'
     }
     s = requests.Session()
     s.headers = headers
     post_data = {
+        # For security purposes, some fields (those with braces) are hidden. You can get them by yourself.
         'client_ip': '{client_ip}',
         'bras_ip': '{bras_ip}',
         'domain_id': '1',
